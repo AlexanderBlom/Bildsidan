@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bilder</title>
+	<style>
+		body {
+			background-image: url("miljo.png");
+			background-repeat: repeat-y;
+			background-origin: padding-box;
+			background-position: right top;
+			background-size: cover;
+
+			display:grid;
+			grid-template-rows: auto;
+			grid-template-rows: 30% 70%;
+			justify-content: space-evenly;
+			}
+			
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				padding: 0 4px;
+				grid-row: 2;
+				align-items: center;
+			}
+
+			.column {
+				flex: 30%;
+				max-width : 25%;
+				padding: 0 4%;
+			}
+
+			.rubrik {
+				font-size: 8em;
+				text-align: left;
+				color: white;
+				margin-right: 4%;
+				text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+			}
+
+			img{
+				border: 1px solid white;
+			}
+
+			@media screen and (max-width: 600px) {
+				.column{
+					flex:100%;
+					max-width:100%;
+				}
+
+				.rubrik{
+					text-align: center;
+					font-size: 8em;
+					padding:0px;
+				}
+
+				.bg{
+					grid-template-rows: 20% 80%;
+				}
+			}
+	</style>
+</head>
+<body>
+	<main class="bg">
+		<h1 class="rubrik">Bilder</h1>
+		<div class="row">
+			<div class="column">
+				<img src="benja.png" width="100%">
+			</div>
+			<div class="column">
+				<img src="kieran.png" width="100%">
+			</div>
+			<div class="column">
+				<img src="jag.png" width="100%">
+			</div>
+		</div>
+
+	</main>
+</body>
+</html>
